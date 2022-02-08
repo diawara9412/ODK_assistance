@@ -1,0 +1,108 @@
+<div class="page-content-wrapper  mt-3" style="padding-top: 50px;">
+    <div class="page-content">
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <div class="card" id="card" >
+                    <a>
+                        <div class="panel-body">
+                            <h3 routerLink="" style="text-align: center; color: #000; ">100 <br>Apprenants</h3>
+                         
+                            <span class="text-small margin-top-10 full-width"></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <div class="card" id="card">
+                    <a>
+                        <div class="panel-body">
+                            <h3  style="text-align: center;color: #000;">100 <br>Apprenants Assister</h3>
+                           
+                            <span class="text-small margin-top-10 full-width"></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+           
+        
+        </div>
+        <!-- apprès card -->
+        			<!-- start page content -->
+                    <div class="page-content-wrapper">
+                        <div class="page-content">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="card card-box">
+                                        
+                                        <div class="card-body ">
+                                            <div class="row p-b-20">
+                                                <div class="col-md-6 col-sm-6 col-6">
+                                                    <div class="btn-group">
+                                                        <a href="/addAdmin" id="addRow" class="btn btn-warning">
+                                                            Ajouter  <i class="fa fa-plus"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <form class="navbar-form">
+                                                    <div class="input-group no-border">
+                                                      <input type="text" value="" class="form-control" placeholder="Rechercher">
+                                                      <button type="submit" class="btn btn-white btn-round btn-just-icon">
+                                                        <i class="material-icons">search</i>
+                                                        <div class="ripple-container"></div>
+                                                      </button>
+                                                    </div>
+                                                  </form>
+                                                
+                                            </div>
+                                            
+                                            
+                                            <div class="table-scrollable" id="example4">
+                                            
+                                        
+                                            <table class="table table-hover table-checkable order-column full-width" >
+                                                <thead>
+                                                    <tr>
+                                                        <th class="center"></th>
+                                                        <th class="center"> Nom </th>
+                                                        <th class="center"> Prénom </th>
+                                                        <th class="center"> Téléphone </th>
+                                                        <th class="center"> Email </th>
+                                                        
+                                                        
+                                                        <th class="etat">Etat</th>
+                                                        <th class="action"> Action </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody  >
+                                                    <tr class="odd gradeX" *ngFor="let item of listApprenant" >
+                                                        <td class="user-circle-img">
+                                                                <img src="../assets/img/Groupe.png" width="50px" alt="">
+                                                        </td>
+                                                        <td class="center"><span></span>{{item.nom}}</td>
+                                                        <td class="center"><span></span>{{item.prenom}}</td>
+                                                        <td class="center"><span ></span>{{item.email}}</td>
+                                                        <td class="center"><span></span>{{item.telephone}}</td>
+                                                        <td class="center"><span></span>{{item.etat}}</td>
+
+                                                       
+                                                        <td class="center">
+                                                            <a href="#" class="btn btn-link btn-info btn-just-icon like"><i class="material-icons">person</i></a>
+                                                            <a href="#" class="btn btn-link btn-warning btn-just-icon edit"><i class="material-icons">edit</i></a>
+                                                            <a href="#" class="btn btn-link btn-danger btn-just-icon remove"><i class="material-icons">close</i></a>
+                                                          </td>
+                                                    </tr>
+        
+                                                
+                                                    
+        
+                                                    
+                                                </tbody>
+                                            </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- end page content -->
+                        </div>
+                    </div> 
