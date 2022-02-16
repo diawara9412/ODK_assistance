@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UserRenduDetailComponent } from './user-rendu-detail.component';
+import { ListRessourceComponent } from './list-ressource.component';
 
-describe('UserRenduDetailComponent', () => {
-  let component: UserRenduDetailComponent;
-  let fixture: ComponentFixture<UserRenduDetailComponent>;
+describe('ListRessourceComponent', () => {
+  let component: ListRessourceComponent;
+  let fixture: ComponentFixture<ListRessourceComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UserRenduDetailComponent ]
+      declarations: [ ListRessourceComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UserRenduDetailComponent);
+    fixture = TestBed.createComponent(ListRessourceComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

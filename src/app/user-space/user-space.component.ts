@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServicesService } from '../services.service';
 
 @Component({
   selector: 'app-user-space',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-space.component.css']
 })
 export class UserSpaceComponent implements OnInit {
-
-  constructor() { }
+ loginData : any;
+ list :any;
+  constructor(private service : ServicesService) { }
 
   ngOnInit(): void {
+    this.loginData=JSON.parse(localStorage["isLogin"]);
+    this.EvaluationParApprenant();
+  }
+  EvaluationParApprenant(){
+    this.service.ApprenantEvaluation(this.loginData.id).subscribe((data)=>{
+     console.log(data)
+     this.list = data;
+    })
   }
 
 }

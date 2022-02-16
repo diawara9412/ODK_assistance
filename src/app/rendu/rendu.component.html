@@ -1,0 +1,21 @@
+<div class="col-md-6" id="tout">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Notification Rendu</h4>
+      </div>
+      <div class="card-body" *ngFor="let item of listRendu">
+       
+       
+        <div class="alert alert-warning">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <i class="material-icons">close</i>
+            </button>
+            <span>
+              <b> {{item.apprenant.nom}} {{item.apprenant.prenom}} </b> à fait un rendu sur le Brief {{item.brief.type}} le {{item.brief.date}}</span>
+          </div>
+       
+        
+        
+      </div>
+    </div>
+  </div>

@@ -159,29 +159,30 @@
         <!-- ================================== FIn statistiques Row ================================== -->
         <h3>Briefs</h3>
         <br>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card card-product">
+        <div class="row" >
+          <div class="col-md-4" *ngFor="let item of listBrief">
+            <a routerLink="/briefDetail/{{item.id}}">
+            <div class="card card-product" >
               <div class="card-header card-header-image" data-header-animation="true">
-                <a href="#pablo">
+                <a href="#">
                   <img class="img" src="../assets/img/card-2.jpg">
                 </a>
               </div>
-              <div class="card-body">
+              <div class="card-body" routerLink="/briefDetail/{{item.id}}">
                 
                 <h4 class="card-title">
-                  <a href="#pablo">Gestion Apprenants ODK</a>
+                  <a href="#">{{item.type}}</a>
                 </h4>
                 <div class="card-description">
-                  The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Barcelona.
+                  {{item.description}}
                 </div>
               </div>
               <div class="card-footer">
                 <div class="price">
-                  <h4 style="color: rgb(243, 173, 43); font-weight: bold;">Formateur :</h4>
+                  <h4 style="color: rgb(243, 173, 43); font-weight: bold;"> Formateur :</h4>
                 </div>
                 <div class="stats">
-                  <p class="card-category" style="color: black; font-weight: bold;"><i class="material-icons">portrait</i> Diawara</p>
+                  <p class="card-category" style="color: black; font-weight: bold;"><i class="material-icons">portrait</i> {{item.formateur.nom}}</p>
                 </div>
               </div>
               <div class="card-footer">
@@ -189,78 +190,11 @@
                   <h4 style="color: rgb(243, 173, 43); font-weight: bold;">Date :</h4>
                 </div>
                 <div class="stats">
-                  <p class="card-category" style="color: black; font-weight: bold;"><i class="material-icons">date_range</i> 01/02/2022</p>
+                  <p class="card-category" style="color: black; font-weight: bold;"><i class="material-icons">date_range</i>{{item.date}}</p>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card card-product">
-              <div class="card-header card-header-image" data-header-animation="true">
-                <a href="#pablo">
-                  <img class="img" src="../assets/img/card-3.jpg">
-                </a>
-              </div>
-              <div class="card-body">
-                
-                <h4 class="card-title">
-                  <a href="#pablo">Office Studio</a>
-                </h4>
-                <div class="card-description">
-                  The place is close to Metro Station and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the night life in London, UK.
-                </div>
-              </div>
-              <div class="card-footer">
-                <div class="price">
-                    <h4 style="color: rgb(243, 173, 43); font-weight: bold;">Formateur :</h4>
-                </div>
-                <div class="stats">
-                    <p class="card-category" style="color: black; font-weight: bold;"><i class="material-icons">portrait</i> Diawara</p>
-                  </div>
-              </div>
-              <div class="card-footer">
-                <div class="price">
-                    <h4 style="color: rgb(243, 173, 43); font-weight: bold;">Date :</h4>
-                </div>
-                <div class="stats">
-                    <p class="card-category" style="color: black; font-weight: bold;"><i class="material-icons">date_range</i> 01/02/2022</p>
-                  </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card card-product">
-              <div class="card-header card-header-image" data-header-animation="true">
-                <a href="#pablo">
-                  <img class="img" src="../assets/img/card-1.jpg">
-                </a>
-              </div>
-              <div class="card-body">
-                
-                <h4 class="card-title">
-                  <a href="#pablo">Beautiful Castle</a>
-                </h4>
-                <div class="card-description">
-                  The place is close to Metro Station and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Milan.
-                </div>
-              </div>
-              <div class="card-footer">
-                <div class="price">
-                    <h4 style="color: rgb(243, 173, 43); font-weight: bold;">Formateur :</h4>
-                </div>
-                <div class="stats">
-                    <p class="card-category" style="color: black; font-weight: bold;"><i class="material-icons">portrait</i> Diawara</p>
-                  </div>
-              </div>
-              <div class="card-footer">
-                <div class="price">
-                    <h4 style="color: rgb(243, 173, 43); font-weight: bold;">Date :</h4>
-                </div>
-                <div class="stats">
-                    <p class="card-category" style="color: black; font-weight: bold;"><i class="material-icons">date_range</i> 01/02/2022</p>
-                  </div>
-              </div>
-            </div>
+          </a>
           </div>
         </div>
       </div>
